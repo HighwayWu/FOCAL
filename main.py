@@ -332,7 +332,9 @@ def ForensicTesting(model, bs=1, test_npy='', test_file=None):
     test_num = len(test_file)
     test_dataset = MyDataset(test_num, test_file, choice='test')
     test_loader = DataLoader(dataset=test_dataset, batch_size=bs, num_workers=min(48, bs), shuffle=False)
-    model.eval()
+    # model.eval()  # Fix Bug (Using following 'eval()')
+    for net in model.network_list:
+      net.eval()
 
     f1, iou = [], []
     if args.save_res == 1:
