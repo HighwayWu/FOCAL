@@ -30,7 +30,7 @@ Image forgery detection aims to detect and locate forged regions in an image. Mo
 To resolve this dilemma, we propose the FOrensic ContrAstive cLustering (FOCAL) method, a novel, simple yet very effective paradigm based on contrastive learning and unsupervised clustering for image forgery detection. Specifically, FOCAL 1) utilizes pixel-level contrastive learning to supervise the high-level forensic feature extraction in an image-by-image manner, explicitly reflecting the above relative definition; 2) employs an on-the-fly unsupervised clustering algorithm (instead of a trained one) to cluster the learned features into forged/pristine categories, further suppressing the cross-image influence from training data; and 3) allows to further boost the detection performance via simple feature-level concatenation without the need of retraining.
 
 <p align='center'>  
-  <img src='https://github.com/HighwayWu/FOCAL/blob/main/imgs/framework.jpg' width='850'/>
+  <img src='https://github.com/HighwayWu/FOCAL/blob/main/imgs/pipeline.jpg' width='850'/>
 </p>
 <p align='center'>  
   <em> Our proposed FOCAL framework utilizes contrastive learning to supervise the training phase, while employing an unsupervised clustering algorithm in the testing phase.</em>
@@ -39,7 +39,7 @@ To resolve this dilemma, we propose the FOrensic ContrAstive cLustering (FOCAL) 
 Extensive experimental results over six public testing datasets demonstrate that our proposed FOCAL significantly outperforms the state-of-the-art competing algorithms by big margins: +24.8% on Coverage, +18.9% on Columbia, +17.3% on FF++, +15.3 on MISD, +15.0% on CASIA, and +10.5% on NIST in terms of IoU. The paradigm of FOCAL could bring fresh insights and serve as a novel benchmark for the image forgery detection task.
 
 <p align='center'>  
-  <img src='https://github.com/HighwayWu/FOCAL/blob/main/imgs/cmp.jpg' width='850'/>
+  <img src='https://github.com/HighwayWu/FOCAL/blob/main/imgs/qua_cmp.jpg' width='850'/>
 </p>
 <p align='center'>  
   <em> Qualitative comparison of forgery detection results on some representative testing images.</em>
@@ -87,4 +87,5 @@ If you use this code for your research, please cite the reference:
   doi={10.1109/TDSC.2025.3583167}
 }
 ```
+
 
