@@ -221,7 +221,7 @@ class FOCAL(nn.Module):
                    self.save_dir + path + '%s_weights.pth' % self.network_list[0].module.name)
 
     def load(self, extractor, path=''):
-        weights_file = torch.load('weights/' + path)
+        weights_file = torch.load('weights/' + path, weights_only=True)
         cur_weights = extractor.state_dict()
         for key in weights_file:
             if key in cur_weights.keys() and weights_file[key].shape == cur_weights[key].shape:
